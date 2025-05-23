@@ -9,8 +9,7 @@
                     <a href="{{userData.html_url}}" target="_blank" rel="noopener noreferrer"
                         id="user">&#64;{{userData.login}}</a>
                 </div>
-                <!-- <p id="date">Joined ${datesegments[2]} ${months[datesegments[1] - 1]
-                    } ${datesegments[0]}</p> -->
+                <p id="date">Joined {{userData.created_at | date}}</p>
             </div>
         </div>
         <p id="bio">{{userData.bio}}</p>
@@ -63,8 +62,7 @@
                     <a href="{{userData.html_url}}" target="_blank" rel="noopener noreferrer"
                         id="user">&#64;{{userData.login}}</a>
                 </div>
-                <!-- <p id="date">Joined ${datesegments[2]} ${months[datesegments[1] - 1]
-                    } ${datesegments[0]}</p> -->
+                <p id="date">Joined {{userData.created_at | date}}</p>
             </div>
         </div>
         <p id="bio">{{userData.bio}}</p>
@@ -111,16 +109,3 @@
 </div>
 
 }
-<!-- @if(dates){
-
-<div class="contributions-container">
-    <h3 class="text-center mb-4 text-primary">GitHub Contributions</h3>
-
-    <div class="grid">
-        @for (date of dates; track $index) {
-        <div class="cell" [style.background]="contributions[date].color"
-            [title]="date + ': ' + contributions[date].count + ' contributions'"></div>
-        }
-    </div>
-</div>
-} -->
